@@ -14,7 +14,8 @@ collectd_exporter \
 rabbitmq_exporter \
 pushgateway \
 sachet \
-statsd_exporter
+statsd_exporter \
+hpraid_exporter
 
 .PHONY: $(PACKAGES7)
 

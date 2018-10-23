@@ -1,0 +1,15 @@
+# -*- mode: conf -*-
+
+[Unit]
+Description=Prometheus HP RAID exporter.
+Documentation=https://github.com/ProdriveTechnologies/hpraid_exporter
+After=network.target
+
+[Service]
+EnvironmentFile=-/etc/default/hpraid_exporter
+User=root
+ExecStart=/usr/bin/hpraid_exporter $HPRAID_EXPORTER_OPTS
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
